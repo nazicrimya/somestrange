@@ -31,4 +31,11 @@
 		public static function exitUser() {
 			session_unset();
 		}
+
+		public static function getCountUsers() {
+			$db = Db::getConnection();
+			$res = $db->query("SELECT COUNT(*) FROM de_user");	
+			$arr = $res->fetch(PDO::FETCH_NUM);
+			return $arr[0];
+		}
 	}

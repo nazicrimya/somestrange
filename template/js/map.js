@@ -7,6 +7,7 @@ $(document).ready(function() {
 		$.get("../views/main/index.php", function(data){
 				$("#main_page").html(data);
 		});
+		window.location.href = "/";
 	});
 
 	$('#nav #login').click(function() {
@@ -23,6 +24,12 @@ $(document).ready(function() {
 
 	$('#nav #about').click(function() {
 		$.get("../views/about/index.php", function(data){
+				$("#main_page").html(data);
+		});
+	});
+
+	$('#nav #post').click(function() {
+		$.get("../views/post/index.php", function(data){
 				$("#main_page").html(data);
 		});
 	});
